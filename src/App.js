@@ -4,6 +4,7 @@ import axios from "axios";
 
 function App() {
   const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState(['');
 
   useEffect(() => {
     axios
@@ -19,7 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <h2>crud app</h2>
+      <div>
+        <h1>Search a currency</h1>
+        <form>
+          <input type="text" placeholder="Search" />
+        </form>
+      </div>
     </div>
   );
 }
