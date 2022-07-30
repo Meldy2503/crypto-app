@@ -27,7 +27,7 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div>
       <div>
         <h1>Search a currency</h1>
         <form>
