@@ -35,6 +35,31 @@ body #dark {
   position: relative;
 }
 
+.coin-nav {
+  width: 100%;
+  box-shadow: 0.1rem 0.1rem 0.2rem #d0d0d0;
+}
+
+.coin-nav > div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 120rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.coin-nav h3 {
+  color: rgb(21, 165, 28);
+  text-shadow: 0.1rem 0.3rem 0.1rem #777;
+  font-size: 2rem;
+}
+
+.switch {
+  display: flex;
+  gap: 1rem;
+}
+
 .coin-search {
   display: flex;
   flex-direction: column;
@@ -68,12 +93,8 @@ body #dark {
   color: #e2e2e2;
 }
 
-.example {
+.coin-heading {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
+  width: 90rem;
+  justify-content: space-between;
 }

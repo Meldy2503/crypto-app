@@ -14,7 +14,7 @@ export function MaterialDesignSwitch() {
   };
 
   return (
-    <div className="example">
+    <div className="switch">
       <label>
         <Switch
           onChange={handleChange}
@@ -25,6 +25,8 @@ export function MaterialDesignSwitch() {
           onColor="#86d3ff"
           onHandleColor="#2693e6"
           activeBoxShadow="0px 0px 1px 5px rgba(0, 0, 0, 0.2)"
+          height={20}
+          width={40}
         />
       </label>
       <p>

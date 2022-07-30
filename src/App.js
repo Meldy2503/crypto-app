@@ -38,7 +38,12 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <main className="coin-app" id={theme}>
-        <MaterialDesignSwitch />
+        <nav className="coin-nav">
+          <div>
+            <h3>COINC</h3>
+            <MaterialDesignSwitch />
+          </div>
+        </nav>
         <div className="coin-search">
           <h1 className="coin-text">Search a Currency</h1>
           <form>
@@ -49,6 +54,14 @@ function App() {
               className="coin-input"
             />
           </form>
+        </div>
+        <div className="coin-heading">
+          <h3>hhhhhhhhh</h3>
+          <h3>bbbbbbbbb</h3>
+          <h3>yyyyyyyy</h3>
+          <h3>hhhhhh</h3>
+          <h3>hhhhhhh</h3>
+          <h3>iiiiiii</h3>
         </div>
         {filteredCoin.map((coin) => {
           return (

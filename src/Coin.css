@@ -1,7 +1,10 @@
 .coin-container {
   display: flex;
   justify-content: center;
+  /* min-width: 20rem; */
+  /* min-width: 90rem; */
 }
+
 .coin-row {
   display: flex;
   flex-direction: row;
@@ -35,6 +38,7 @@
   justify-content: space-between;
   text-align: center;
   width: 100%;
+  overflow-x: scroll;
 }
 .coin-price {
   width: 11rem;
