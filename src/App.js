@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { createContext } from "react";
 import "./App.css";
 import axios from "axios";
 import Coin from "./Coin";
+import { MaterialDesignSwitch } from "./switch";
 
+export const ThemeContext = createContext(null);
 function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
+  const [theme, setTheme] = useState("dark");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredCoin = coins.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const toggleTheme = () => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
+  };
 
   useEffect(() => {
     axios
@@ -19,41 +35,37 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
-  const filteredCoin = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-  );
-
   return (
-    <div className="coin-app">
-      <div className="coin-search">
-        <h1 className="coin-text">Search a currency</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            onChange={handleChange}
-            className="coin-input"
-          />
-        </form>
-      </div>
-      {filteredCoin.map((coin) => {
-        return (
-          <Coin
-            key={coin.id}
-            name={coin.name}
-            image={coin.image}
-            symbol={coin.symbol}
-            volume={coin.total_volume}
-            price={coin.current_price}
-            marketcap={coin.market_cap}
-            priceChange={coin.price_change_percentage_24h}
-          />
-        );
-      })}
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <main className="coin-app" id={theme}>
+        <MaterialDesignSwitch />
+        <div className="coin-search">
+          <h1 className="coin-text">Search a Currency</h1>
+          <form>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={handleChange}
+              className="coin-input"
+            />
+          </form>
+        </div>
+        {filteredCoin.map((coin) => {
+          return (
+            <Coin
+              key={coin.id}
+              name={coin.name}
+              image={coin.image}
+              symbol={coin.symbol}
+              volume={coin.total_volume}
+              price={coin.current_price}
+              marketcap={coin.market_cap}
+              priceChange={coin.price_change_percentage_24h}
+            />
+          );
+        })}
+      </main>
+    </ThemeContext.Provider>
   );
 }
 
