@@ -1,7 +1,6 @@
 .coin-container {
   display: flex;
   justify-content: center;
-  max-width: 120rem;
 }
 .coin-row {
   display: flex;
@@ -41,10 +40,10 @@
   width: 11rem;
 }
 .coin-volume {
-  width: 23rem;
+  width: 20rem;
 }
 .coin-percent {
-  width: 100%;
+  width: 8rem;
 }
 
 .red {
@@ -55,5 +54,5 @@
   color: #11d811;
 }
 .coin-marketcap {
-  width: 15.5rem;
+  width: 24rem;
 }
