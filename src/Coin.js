@@ -11,27 +11,23 @@ const Coin = ({
   marketcap,
 }) => {
   return (
-    <section className="coin-container">
-      <div className="coin-row">
-        <div className="coin">
+    <tr className="coin-body">
+      <td>
+        <span className="currency">
           <img src={image} alt="crypto" />
           <h1>{name}</h1>
-          <p className="coin-symbol">{symbol}</p>
-        </div>
-        <div className="coin-data">
-          <p className="coin-price">${price}</p>
-          <p className="coin-volume">${volume.toLocaleString()}</p>
-          {priceChange < 0 ? (
-            <p className="coin-percent red">{priceChange.toFixed(2)}%</p>
-          ) : (
-            <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
-          )}
-          <p className="coin-marketcap">
-            Mkt Cap: ${marketcap.toLocaleString()}
-          </p>
-        </div>
-      </div>
-    </section>
+        </span>
+      </td>
+      <td className="coin-symbol">{symbol}</td>
+      <td>${price.toLocaleString()}</td>
+      <td className="coin-volume">${volume.toLocaleString()}</td>
+      {priceChange < 0 ? (
+        <td className="coin-percent red">{priceChange.toFixed(2)}%</td>
+      ) : (
+        <td className="coin-percent green">{priceChange.toFixed(2)}%</td>
+      )}
+      <td className="coin-marketcap">${marketcap.toLocaleString()}</td>
+    </tr>
   );
 };
 

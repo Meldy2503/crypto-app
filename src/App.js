@@ -55,28 +55,36 @@ function App() {
             />
           </form>
         </div>
-        <div className="coin-heading">
-          <h3>hhhhhhhhh</h3>
-          <h3>bbbbbbbbb</h3>
-          <h3>yyyyyyyy</h3>
-          <h3>hhhhhh</h3>
-          <h3>hhhhhhh</h3>
-          <h3>iiiiiii</h3>
+        <div className="table-container">
+          <table>
+            <thead className="coin-heading">
+              <tr className="coin-head">
+                <th>Currency</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Volume</th>
+                <th>Price Change</th>
+                <th>Market Cap</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredCoin.map((coin) => {
+                return (
+                  <Coin
+                    key={coin.id}
+                    name={coin.name}
+                    image={coin.image}
+                    symbol={coin.symbol}
+                    volume={coin.total_volume}
+                    price={coin.current_price}
+                    marketcap={coin.market_cap}
+                    priceChange={coin.price_change_percentage_24h}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-        {filteredCoin.map((coin) => {
-          return (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              symbol={coin.symbol}
-              volume={coin.total_volume}
-              price={coin.current_price}
-              marketcap={coin.market_cap}
-              priceChange={coin.price_change_percentage_24h}
-            />
-          );
-        })}
       </main>
     </ThemeContext.Provider>
   );
