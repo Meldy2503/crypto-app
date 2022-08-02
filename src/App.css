@@ -11,6 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -43,28 +49,29 @@ body #dark {
 .coin-nav > div {
   display: flex;
   justify-content: space-between;
-  max-width: 120rem;
+  max-width: 92rem;
   align-items: center;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
 .coin-nav h3 {
-  color: rgb(21, 165, 28);
-  text-shadow: 0.1rem 0.3rem 0.1rem #777;
-  font-size: 2rem;
+  color: #4801ff;
+  text-shadow: 0.1rem 0.3rem 0.1rem #000;
+  font-size: 2.5rem;
 }
 
 .switch {
   display: flex;
   gap: 1rem;
+  margin-top: 0.9rem;
 }
 
 .coin-search {
   display: flex;
   flex-direction: column;
-  margin-bottom: 6rem;
-  margin-top: 9rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
   justify-content: center;
   align-items: center;
 }
@@ -89,12 +96,72 @@ body #dark {
   );
 }
 
+@media screen and (max-width: 330px) {
+  .coin-input {
+    width: 25rem;
+  }
+
+  .coin-text {
+    font-size: 3rem;
+  }
+}
+
 .coin-input::placeholder {
   color: #e2e2e2;
 }
 
+.table-container {
+  overflow-x: scroll;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+table {
+  width: 90rem;
+  margin: 0 auto;
+}
+
 .coin-heading {
   display: flex;
-  width: 90rem;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 90rem;
+  height: 7rem;
+  padding-left: 3rem;
+}
+
+th {
+  display: flex;
+  align-items: center;
+}
+
+th:nth-child(1) {
+  width: 10rem;
+  margin-right: 10rem;
+}
+th:nth-child(2) {
+  width: 8rem;
+  margin-right: 5rem;
+}
+th:nth-child(3) {
+  width: 5rem;
+  margin-right: 8rem;
+}
+th:nth-child(4) {
+  width: 6rem;
+  margin-right: 6rem;
+}
+th:nth-child(5) {
+  width: 13rem;
+  margin-right: 1rem;
+}
+th:nth-child(6) {
+  width: 13rem;
+}
+
+thead tr {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
 }

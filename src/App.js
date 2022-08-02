@@ -40,7 +40,7 @@ function App() {
       <main className="coin-app" id={theme}>
         <nav className="coin-nav">
           <div>
-            <h3>COINC</h3>
+            <h3>COINIC</h3>
             <MaterialDesignSwitch />
           </div>
         </nav>
@@ -57,8 +57,8 @@ function App() {
         </div>
         <div className="table-container">
           <table>
-            <thead className="coin-heading">
-              <tr className="coin-head">
+            <thead>
+              <tr className="coin-heading">
                 <th>Currency</th>
                 <th>Symbol</th>
                 <th>Price</th>

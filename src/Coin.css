@@ -1,62 +1,90 @@
-.coin-container {
-  display: flex;
-  justify-content: center;
-  /* min-width: 20rem; */
-  /* min-width: 90rem; */
-}
-
-.coin-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 8rem;
-  border-bottom: 0.1rem solid #d7d7d7;
-  width: 90rem;
-}
-.coin {
+th {
   display: flex;
   align-items: center;
-  padding-right: 2.4rem;
-  min-width: 30rem;
 }
 
-.coin img {
-  height: 3rem;
-  width: 3rem;
+th:nth-child(1) {
+  width: 10rem;
+  margin-right: 10rem;
+}
+th:nth-child(2) {
+  width: 8rem;
+  margin-right: 5rem;
+}
+th:nth-child(3) {
+  width: 5rem;
+  margin-right: 8rem;
+}
+th:nth-child(4) {
+  width: 6rem;
+  margin-right: 6rem;
+}
+th:nth-child(5) {
+  width: 13rem;
   margin-right: 1rem;
 }
-.coin h1 {
-  font-size: 1.6rem;
-  width: 15rem;
+th:nth-child(6) {
+  width: 13rem;
 }
-.coin-symbol {
-  text-transform: uppercase;
-}
-.coin-data {
+
+thead tr {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  width: 100%;
-  overflow-x: scroll;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
 }
-.coin-price {
-  width: 11rem;
+
+.coin-body {
+  display: flex;
+  align-items: center;
+  max-width: 90rem;
+  border-top: 1px solid #ccc;
+  height: 7rem;
 }
-.coin-volume {
-  width: 20rem;
+
+.coin-body td {
+  display: flex;
+  justify-content: flex-start;
 }
-.coin-percent {
-  width: 8rem;
+
+.coin-body td:first-child {
+  padding-left: 2rem;
+}
+
+.coin-body td:nth-child(2) {
+  width: 10rem;
+}
+.coin-body td:nth-child(3) {
+  width: 12rem;
+}
+.coin-body td:nth-child(4) {
+  width: 17rem;
+}
+.coin-body td:nth-child(5) {
+  width: 10rem;
+}
+.coin-body td:nth-child(6) {
+  width: 16rem;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  width: 23rem;
+  column-gap: 1rem;
+}
+
+.currency img {
+  width: 3.5rem;
+}
+
+.currency h1 {
+  font-size: 1.6rem;
 }
 
 .red {
-  color: #f00606;
+  color: red;
 }
 
 .green {
-  color: #0eb40e;
-}
-.coin-marketcap {
-  width: 24rem;
+  color: green;
 }
